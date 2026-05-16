@@ -60,7 +60,7 @@ def test_validate_api_response():
     assert validate_api_response(response) == False
 
 def test_extract_names_from_api():
-    json_data = {'characters': [{'name': 'V'}, {'name': 'Johnny'}]}
+    json_data = {'users': [{'id': 1, 'name': 'V'}, {'id': 2, 'name': 'Johnny'}]}
     names = extract_names_from_api(json_data)
     assert names == ['V', 'Johnny']
 
